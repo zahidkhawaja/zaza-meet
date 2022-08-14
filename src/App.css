@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300&display=swap');
+
+.App {
+  text-align: center;
+  font-family: 'Blinker', sans-serif;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background: linear-gradient(45deg, #17edd4fd, #8e18cefd);
+  background-size: 100% 100%;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(5px + 2vmin);
+  color: white;
+}
+
+.App-body {
+  margin: 50px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+}
+
+.right-side {
+  /* border: 5px solid blue; */
+  width: 300px;
+  background: linear-gradient(45deg, #17edd4fd, #8e18cefd);
+  background-size: 100% 100%;
+  border-radius: 15px;
+}
+
+.left-side, .right-side {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.all-content {
+  display: flex;
+  justify-content: center;
+
+}
+
+.left-top, .left-bottom {
+  display: flex;
+}
+
+.new-meeting  {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 30px;
+  color: white;
+  /* Make the text in the div centered vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.new-meeting {
+  background: linear-gradient(45deg, #12b19ebb, #8e18cea1);
+  background-size: 200% 200%;
+  animation: gradient 1s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.new-meeting:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  /* Shift the div up when hovered */
+  /* Smooth transition when hovering and leaving*/
+  transition: all 0.1s ease-in-out;
+  transform: translateY(-2.5px);
+}
+
+.date {
+  /* border: 3px solid purple; */
+}
+
+#time {
+  font-size: 38px;
+}
+
+#day {
+  font-size: 20px;
+}
+
+#location {
+  font-size: 20px;
+}
+
+#time, #day, #location, #temperature {
+  color: white;
+}
+
+#temperature {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+#meetings {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.fetch-location, .fetch-weather {
+  background: white;
+  border-radius: 10px;
+  border-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.fetch-location:hover, .fetch-weather:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .App-body {
+    margin: 25px;
+  }
+
+  .all-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  
+}
+
